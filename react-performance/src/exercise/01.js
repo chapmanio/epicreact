@@ -8,6 +8,10 @@ import * as React from 'react'
 const loadGlobe = () => import('../globe')
 const Globe = React.lazy(loadGlobe)
 
+// OR
+// (also can remove focus events)
+// import(/* webpackPrefetch: true */ '../globe')
+
 function App() {
   const [showGlobe, setShowGlobe] = React.useState(false)
 
