@@ -17,11 +17,6 @@ const cellAtoms = atomFamily({
   default: ({row, column}) => initialGrid[row][column],
 })
 
-// 💰 I'm going to give this hook to you as it's mostly here for our contrived
-// example purposes. Just comment this in when you're ready to use it.
-// Here's how it's used:
-// const updateGrid = useUpdateGrid()
-// then later: updateGrid({rows, columns})
 function useUpdateGrid() {
   return useRecoilCallback(({set}) => ({rows, columns}) => {
     for (let row = 0; row < rows; row++) {
